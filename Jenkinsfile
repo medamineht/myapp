@@ -34,9 +34,9 @@ node {
 	   def tomcatStop = "${tomcatHome}bin/shutdown.sh"
 	   
 	   sshagent (credentials: ['tomcat-dev']) {
-	      sh "scp -o StrictHostKeyChecking=no target/myweb*.war devops@${tomcatDevIp}:${webApps}myweb.war"
-          sh "ssh devops@${tomcatDevIp} ${tomcatStop}"
-		  sh "ssh devops@${tomcatDevIp} ${tomcatStart}"
+	      sh "scp -o StrictHostKeyChecking=no target/myweb*.war ${tomcatDevIp}:${webApps}myweb.war"
+          sh "ssh ${tomcatDevIp} ${tomcatStop}"
+		  sh "ssh ${tomcatDevIp} ${tomcatStart}"
        }
    }
    stage('Email Notification'){
