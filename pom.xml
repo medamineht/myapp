@@ -31,12 +31,12 @@
 	</dependencies>
 	<distributionManagement>
 		 <snapshotRepository>
-		    <id>nexus</id>
+		    <id>deployment</id>
 		    <url>http://192.168.224.154:8081/repository/SAMPLE-SNAP/</url>
 		 </snapshotRepository>
 		
 		<repository>
-		    <id>nexus</id>
+		    <id>deployment</id>
 		    <url>http://192.168.224.154:8081/repository/SAMPLE-REL/</url>
 		</repository>
   	</distributionManagement>
