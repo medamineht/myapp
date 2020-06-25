@@ -34,7 +34,7 @@ node {
 	   def tomcatStop = "${tomcatHome}bin/shutdown.sh"
 	   sh "scp -o StrictHostKeyChecking=no target/myweb*.war devops@${tomcatDevIp}:${webApps}myweb.war"
       sh "ssh devops@${tomcatDevIp} ${tomcatStop}"
-		sh "ssh devopss@${tomcatDevIp} ${tomcatStart}"
+		sh "ssh devops@${tomcatDevIp} ${tomcatStart}"
 
    }
    stage('Email Notification'){
