@@ -36,7 +36,7 @@ node {
             def tomcatStart = "${tomcatHome}bin/startup.sh"
             def tomcatStop = "${tomcatHome}bin/shutdown.sh"
             sh "scp -o StrictHostKeyChecking=no target/myweb*.war devops@${tomcatDevIp}:${webApps}myweb.war"
-            sh "ssh devops@${tomcatDevIp} ${tomcatStop}"
+            sh "ssh devopsss@${tomcatDevIp} ${tomcatStop}"
                 sh "ssh devops@${tomcatDevIp} ${tomcatStart}"
 
         }
