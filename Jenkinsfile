@@ -14,7 +14,7 @@ node {
    stage('Sonar Publish'){
 	   withCredentials([string(credentialsId: 'sonarqube', variable: 'sonarToken')]) {
         def sonarToken = "sonar.login=${sonarToken}"
-        sh "${mvn} sonar:sonar -D${sonarUrl}  -D${sonarToken}"
+        sh "mvn sonar:sonar -D${sonarUrl}  -D${sonarToken}"
 	 }
       
    }
@@ -23,7 +23,7 @@ node {
    stage('Mvn Package'){
 	   // Build using maven
 	   
-	   sh "${mvn} clean package deploy"
+	   sh "mvn clean package deploy"
    }
    
    stage('deploy-dev'){
