@@ -2,7 +2,7 @@
 node {
    // This is to demo github action	
    def sonarUrl = 'sonar.host.url=http://192.168.224.154:9000'
-   def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
+   def mvn = tool (name: 'M3', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
     // Clone repo
 	git branch: 'master', 
