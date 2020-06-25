@@ -1,7 +1,7 @@
 
 node {
     try{
-        emailext body: 'test!!', subject: 'starting jenkins', to: 'amincssmilan@gmail.com'
+        emailext body: 'test!!', subject: 'starting jenkins', to: 'medaminehadjtaieb@gmail.com'
 
         // This is to demo github action	
         def sonarUrl = 'sonar.host.url=http://192.168.224.154:9000'
@@ -41,7 +41,7 @@ node {
 
         }
     } catch (err) {
-        emailext body: "${err}", subject: 'Failer', to: 'amincssmilan@gmail.com'
+        emailext body: "${err}", subject: 'Failer', to: 'medaminehadjtaieb@gmail.com'
     }
 }
 
